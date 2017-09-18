@@ -11,4 +11,4 @@ docker run \
   -e "ARA_DATABASE=mysql+pymysql://ara:password@10.0.0.10/ara" \
   ybovard/ara:nginx
 ```
-The directory <my_ssl_certificates_dir> should contains 2 files: ssl.crt and ssl.key
+The directory ```<my_ssl_certificates_dir>``` should contains 2 files: ssl.crt and ssl.key
