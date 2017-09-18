@@ -1,0 +1,13 @@
+[uwsgi]
+project = ara
+uid = nginx
+chdir = /var/www/ara
+module = wsgi:application
+master = true
+processes = 1
+socket = /var/run/ara.socket
+chown-socket = nginx:nginx
+chmod-socket = 660
+vacuum = true
+single-interpreter = true
+env = ANSIBLE_CONFIG=/var/www/ara/ansible.cfg
