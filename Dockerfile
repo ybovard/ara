@@ -16,7 +16,7 @@ RUN apt-get update && apt-get upgrade -y \
   && apt-get -y install supervisor \
   && apt-get -y install gcc python-dev libffi-dev libssl-dev \
   && apt-get -y install python-pip libxml2-dev libxslt1-dev \
-  && pip install tox uwsgi ara \
+  && pip install ansible==2.3.2.0 tox uwsgi ara pymysql \
   && cp /usr/local/bin/ara-wsgi /var/www/ara/wsgi.py \
   && cd /usr/local/lib/python2.7/dist-packages/ara \
   && patch -p0 < /root/wsgi.patch \
