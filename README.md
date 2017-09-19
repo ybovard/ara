@@ -8,7 +8,7 @@ run ARA on NGINX (https://nginx.org/en/). This image is based on the nginx offic
 docker run \
   --name ara \
   -v <my_ssl_certificates_dir>/:/etc/nginx/ssl \
-  -e "ARA_DATABASE=mysql+pymysql://ara:password@10.0.0.10/ara" \
+  -e "ARA_DATABASE=mysql+pymysql://db_user:db_password@db_host/db_name" \
   ybovard/ara:nginx
 ```
 The directory ```<my_ssl_certificates_dir>``` should contains 2 files: ssl.crt and ssl.key
