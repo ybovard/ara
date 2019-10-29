@@ -1,0 +1,18 @@
+version: "3"
+services:
+  api:
+    image: ara_api:latest
+    command: "0.0.0.0:8000"
+    ports:
+      - 8000:8000
+    environment:
+      - ARA_SETTINGS=/tmp/settings.yml
+    volumes:
+      - ./ara_api_sqlite.yml:/tmp/settings.yml
+  web:
+    image: ara_web:latest
+    command: "--host=127.0.0.1 --port=3000"
+    volumes:
+      - ./ara_web.json:/opt/ara-web/public/config.json
+    ports:
+      - 3000:3000
